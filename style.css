@@ -1,0 +1,76 @@
+html {
+  background: #02aab0;
+  background: -webkit-linear-gradient(to right, #00cdac, #02aab0);
+  background: linear-gradient(to right, #00cdac, #02aab0);
+  font-family: "helvetica neue";
+  text-align: center;
+  font-size: 10px;
+}
+
+body {
+  font-size: 2rem;
+  display: flex;
+  flex: 1;
+  min-height: 100vh;
+  align-items: center;
+}
+.clock {
+  width: 40rem;
+  height: 40rem;
+  border: 20px solid #fffffe;
+  border-radius: 50%;
+  margin: auto;
+  position: relative;
+  padding: 2em;
+  box-shadow: 0 0 0px 4px rgba(0, 0, 0, 0.1), inset 0 0 0 3px #efefef,
+    inset 0 0 0 10px rgb(1, 111, 147), 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.clock-face {
+    /* border: red solid   1px ; */
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform: translateY(-25px);
+}
+
+.hand {
+  width: 50%;
+  height: 6px;
+  background: #fff;
+  position: absolute;
+  top: 55%;
+  transform-origin: 100%; /*girar desde su eje*/
+  transform: rotate(90deg);
+  transition: all 0.005s;
+  transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+}
+.hourHand {
+  width: 30%;
+  top: 55%;
+  left: 20%;
+}
+.secondHand {
+  height: 2px;
+  background: rgb(36, 255, 2);
+}
+
+.numberTwelve, .numberThree, .numberSix, .numberNine {
+  position: absolute;
+  color: #ffffff;
+}
+.numberTwelve {
+  left: 47%;
+}
+.numberThree {
+  right: 0;
+  top: 46%;
+}
+.numberNine {
+  left: 0;
+  top: 46%;
+}
+.numberSix {
+  top: 92%;
+  left: 48.5%;
+}
